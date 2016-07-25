@@ -1,0 +1,348 @@
+/* 
+Cinecircuit CSS StyleSheet 
+Developed, Designed & Coded by Abhi Nayar
+A Yale Digital Humanities Lab Project 
+Contact: abhishek.nayar[at]yale.edu
+*/
+
+/*
+Color Library:
+off-white: #fafafa;
+off-black: #0a0a0a;
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.page-top {
+    height: auto;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+    .page-top {
+        min-height: 145px;
+    }
+}
+
+.logo {
+    height: auto;
+    margin-top: 32px;
+}
+
+.logo img {
+    max-width: 315px;
+}
+
+@media (min-width: 768px) {
+    .logo img {
+        max-width: 400px;
+    }
+}
+
+.nav {
+    overflow: hidden;
+}
+
+.nav.open {
+    max-height: 200px;
+    transition: all 1s cubic-bezier(0, 1, 0.5, 1);
+}
+
+@media (max-width: 768px) {
+    .nav.closed {
+        max-height: 0;
+        transition: all 0.33s cubic-bezier(0, 1, 0.5, 1);
+    }   
+}
+
+@media(min-width: 768px) {
+    .nav.open, .nav.closed {
+        max-height: auto !important;
+    }
+    
+    .nav {
+        height: auto;
+    }
+}
+
+.nav-list {
+    width: 100%;
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 15px;
+}
+
+.nav-list .nav-item {
+    margin-top: 10px;
+}
+
+.nav-list .nav-item a {
+    color: #000;
+    font-size: 18px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.nav-list .nav-item a.active {
+    font-weight: 500;
+    cursor: default;
+}
+
+.mob-nav-link {
+    color: #000;
+    font-size: 21px;
+    font-weight: 100;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.mob-nav-link span {
+    display: block;
+    margin-top: -5px;
+    font-size: 12px;
+}
+
+.nav-item.mobile-close {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .nav-list .nav-item {
+        display: inline-block;
+        margin-right: 22.5px;
+        margin-left: 22.5px;
+    }
+    
+    .nav-list .nav-item:first-of-type {
+        margin-left: 0px;
+    }
+    
+    .nav-list .nav-item:last-of-type {
+        margin-right: 0px;
+    }
+    
+    .nav-list .nav-item a {
+        font-size: 20px;
+    }
+    
+    .nav-list .nav-item a:hover {
+        border-bottom: 1px solid rgba(0,0,0,0.6);
+    }
+    
+    .nav-list .nav-item a.active:hover {
+        border: none;
+    }
+}
+
+.map-content {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.map-content img {
+    max-width: 100%;
+}
+
+.index-project-info {
+    margin-top: 30px;
+}
+
+.index-project-info p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.index-project-info p span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.festival-banner {
+    width: 100%;
+    margin-top: 90px;
+}
+
+.festival-banner img {
+    max-width: 100%;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+}
+
+.powered-by {
+    width: 100%;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.powered-by img {
+    max-width: 300px;
+}
+
+.to-top {
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.to-top a {
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.to-top a span {
+    font-size: 14px;
+}
+
+/* PROJECTS PAGE CSS */
+.projects .page-body {
+    padding-top: 30px;
+}
+
+.projects .title-wrapper {
+    margin-top: 30px;
+}
+
+.projects h1 {
+    font-size: 28px;
+    color: #000;
+    font-weight: 700;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+.projects .img  img, .projects .map img {
+    max-width: 100%;
+}
+
+.projects p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000;
+}
+
+.projects p span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.projects .map {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.cannes-desc {
+    margin-bottom: 45px;
+}
+
+/* ABOUT PAGE CSS */
+.about .member-row {
+    margin-top: 30px;
+}
+
+.about .member img {
+    max-width: 100%;
+}
+
+.about .member .member-name h1 {
+    color: #000;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.about .member .member-pos p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: -10px;
+}
+
+.about .powered-by {
+    margin-bottom: 20px;
+}
+
+/* LINKS PAGE CSS */
+.links .container {
+    margin-top: 30px;
+}
+
+.links .left {
+    border-right: 1px solid rgba(0,0,0,0.25);
+}
+
+.links .title h1 {
+    font-size: 28px;
+    color: #000;
+    font-weight: 700;
+}
+
+.links .bib-title {
+    margin-top: 30px;
+}
+
+.links .cont .list {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 45px;
+}
+
+.links .cont .list li a {
+    color: #337ab7;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.links .cont .list li a:hover {
+    cursor: pointer;
+    color: #337ab7;
+    text-decoration: underline;
+}
+
+.links .logo-links {
+    margin-top: -30px;
+}
+
+.links .logo-links img {
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+@media (min-width:768px) {
+    .links .logo-links img {
+        max-width: 75%;
+        margin: 0 auto;
+        margin-top: 30px;
+        float: right;
+    }
+}
